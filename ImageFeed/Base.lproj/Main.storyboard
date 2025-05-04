@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FJx-tn-Pc2">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -94,10 +95,95 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17.557251908396946" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1477" y="13"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="ROb-4i-0v4">
+            <objects>
+                <viewController id="FJx-tn-Pc2" userLabel="Profile" customClass="ProfileViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cwa-DV-lzE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like_button_on" translatesAutoresizingMaskIntoConstraints="NO" id="soL-5I-KXy" userLabel="Avatar Image View">
+                                <rect key="frame" x="16" y="150" width="70" height="70"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="EMC-qc-2Hh"/>
+                                    <constraint firstAttribute="width" constant="70" id="ftg-84-2so"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edV-Bf-xq5" userLabel="Logout Button">
+                                <rect key="frame" x="333" y="163" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="VP2-GQ-oMP"/>
+                                    <constraint firstAttribute="height" constant="44" id="kye-67-mzP"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="logout_button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test  Name Labe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaQ-AY-Yct">
+                                <rect key="frame" x="16" y="228" width="361" height="28"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test description label!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27z-a6-Y6N" userLabel="Description">
+                                <rect key="frame" x="16" y="288" width="361" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@test_login_label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQU-X9-gVE" userLabel="Login Lable">
+                                <rect key="frame" x="16" y="264" width="361" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.68235294117647061" green="0.68627450980392157" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gXq-bf-9yY"/>
+                        <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="soL-5I-KXy" firstAttribute="leading" secondItem="gXq-bf-9yY" secondAttribute="leading" constant="16" id="28V-y2-4Eg"/>
+                            <constraint firstItem="edV-Bf-xq5" firstAttribute="centerY" secondItem="soL-5I-KXy" secondAttribute="centerY" id="5iO-oR-vEY"/>
+                            <constraint firstItem="27z-a6-Y6N" firstAttribute="top" secondItem="eQU-X9-gVE" secondAttribute="bottom" constant="8" id="CgE-9c-Kl8"/>
+                            <constraint firstItem="eQU-X9-gVE" firstAttribute="leading" secondItem="gXq-bf-9yY" secondAttribute="leading" constant="16" id="PgH-PC-hmL"/>
+                            <constraint firstItem="gXq-bf-9yY" firstAttribute="trailing" secondItem="eQU-X9-gVE" secondAttribute="trailing" constant="16" id="Qwc-JU-FRw"/>
+                            <constraint firstItem="eQU-X9-gVE" firstAttribute="top" secondItem="YaQ-AY-Yct" secondAttribute="bottom" constant="8" id="RVd-q6-KKd"/>
+                            <constraint firstItem="YaQ-AY-Yct" firstAttribute="top" secondItem="soL-5I-KXy" secondAttribute="bottom" constant="8" id="et1-du-XIZ"/>
+                            <constraint firstItem="YaQ-AY-Yct" firstAttribute="leading" secondItem="gXq-bf-9yY" secondAttribute="leading" constant="16" id="iVe-xa-JGU"/>
+                            <constraint firstItem="gXq-bf-9yY" firstAttribute="trailing" secondItem="edV-Bf-xq5" secondAttribute="trailing" constant="16" id="rQ3-BZ-HYc"/>
+                            <constraint firstItem="27z-a6-Y6N" firstAttribute="leading" secondItem="gXq-bf-9yY" secondAttribute="leading" constant="16" id="rzw-oA-r1l"/>
+                            <constraint firstItem="soL-5I-KXy" firstAttribute="top" secondItem="gXq-bf-9yY" secondAttribute="top" constant="32" id="wAz-er-QJA"/>
+                            <constraint firstItem="gXq-bf-9yY" firstAttribute="trailing" secondItem="27z-a6-Y6N" secondAttribute="trailing" constant="16" id="yZ3-t5-8cv"/>
+                            <constraint firstItem="gXq-bf-9yY" firstAttribute="trailing" secondItem="YaQ-AY-Yct" secondAttribute="trailing" constant="16" id="zcY-qm-JHD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="soL-5I-KXy" id="LyX-Ou-7r5"/>
+                        <outlet property="descriptionLabel" destination="27z-a6-Y6N" id="53a-t7-rL9"/>
+                        <outlet property="didTapLogoutButton" destination="edV-Bf-xq5" id="DW3-Pb-Bdw"/>
+                        <outlet property="loginLabel" destination="eQU-X9-gVE" id="uCm-WV-DqN"/>
+                        <outlet property="logoutButton" destination="edV-Bf-xq5" id="87U-qR-BGQ"/>
+                        <outlet property="nameLabel" destination="YaQ-AY-Yct" id="mkg-Ub-UGp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fhy-eF-em5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797" y="14"/>
         </scene>
     </scenes>
     <resources>
         <image name="like_button_on" width="42" height="42"/>
+        <image name="logout_button" width="44" height="44"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
