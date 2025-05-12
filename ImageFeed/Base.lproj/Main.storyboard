@@ -92,7 +92,7 @@
                     <navigationItem key="navigationItem" id="ADV-FW-s0c"/>
                     <connections>
                         <outlet property="tableView" destination="7iI-Eb-0Qi" id="bZq-Jf-F3O"/>
-                        <segue destination="CHd-3r-FHI" kind="show" identifier="ShowSingleImage" id="uuv-h3-M3B"/>
+                        <segue destination="CHd-3r-FHI" kind="presentation" identifier="ShowSingleImage" id="uuv-h3-M3B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -102,23 +102,37 @@
         <!--Single Image View Controller-->
         <scene sceneID="bUQ-jg-QXg">
             <objects>
-                <viewController id="CHd-3r-FHI" customClass="SingleImageViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="CHd-3r-FHI" customClass="SingleImageViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BE5-9m-8eg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="pPm-Iu-zM6" userLabel="singleImageView">
-                                <rect key="frame" x="-8" y="-8" width="409" height="868"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="pPm-Iu-zM6" userLabel="Single Image View">
+                                <rect key="frame" x="-8" y="-67" width="409" height="961"/>
                                 <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvM-J2-o1b" userLabel="Back Button">
+                                <rect key="frame" x="8" y="67" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="iUZ-9a-lpO"/>
+                                    <constraint firstAttribute="height" constant="24" id="pFM-C0-EU0"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="chevronBackward"/>
+                                <connections>
+                                    <action selector="didTapBackButton" destination="CHd-3r-FHI" eventType="touchUpInside" id="aY2-h9-Sp5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5hs-l2-LH4"/>
                         <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="pPm-Iu-zM6" firstAttribute="topMargin" secondItem="5hs-l2-LH4" secondAttribute="top" id="2GQ-4p-Hwk"/>
-                            <constraint firstItem="5hs-l2-LH4" firstAttribute="trailing" secondItem="pPm-Iu-zM6" secondAttribute="trailingMargin" id="LuN-vq-5fJ"/>
-                            <constraint firstItem="pPm-Iu-zM6" firstAttribute="leadingMargin" secondItem="5hs-l2-LH4" secondAttribute="leading" id="goR-MX-m3z"/>
-                            <constraint firstItem="5hs-l2-LH4" firstAttribute="bottom" secondItem="pPm-Iu-zM6" secondAttribute="bottomMargin" id="z5V-Db-nUk"/>
+                            <constraint firstItem="pPm-Iu-zM6" firstAttribute="topMargin" secondItem="BE5-9m-8eg" secondAttribute="top" id="2GQ-4p-Hwk"/>
+                            <constraint firstAttribute="trailing" secondItem="pPm-Iu-zM6" secondAttribute="trailingMargin" id="LuN-vq-5fJ"/>
+                            <constraint firstItem="FvM-J2-o1b" firstAttribute="top" secondItem="5hs-l2-LH4" secondAttribute="top" constant="8" id="Zzm-5O-RSS"/>
+                            <constraint firstItem="FvM-J2-o1b" firstAttribute="leading" secondItem="5hs-l2-LH4" secondAttribute="leading" constant="8" id="bSq-NE-6zE"/>
+                            <constraint firstItem="pPm-Iu-zM6" firstAttribute="leadingMargin" secondItem="BE5-9m-8eg" secondAttribute="leading" id="goR-MX-m3z"/>
+                            <constraint firstAttribute="bottom" secondItem="pPm-Iu-zM6" secondAttribute="bottomMargin" id="z5V-Db-nUk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ipc-ga-Vd5"/>
@@ -237,11 +251,10 @@
         <!--Navigation Controller-->
         <scene sceneID="5MB-fS-jyu">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0fa-iA-gyY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="0fa-iA-gyY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_editorial_active" id="J4G-lg-eaC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kSS-DU-m5t">
-                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -261,6 +274,7 @@
     </scenes>
     <resources>
         <image name="0" width="1600" height="1059"/>
+        <image name="chevronBackward" width="9" height="15.666666984558105"/>
         <image name="like_button_on" width="42" height="42"/>
         <image name="logout_button" width="44" height="44"/>
         <image name="tab_editorial_active" width="20" height="22"/>
