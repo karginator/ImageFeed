@@ -71,6 +71,7 @@
                                             <outlet property="cellIamge" destination="qqD-VY-XZb" id="FkO-kg-PzW"/>
                                             <outlet property="dateLabel" destination="P5o-fa-LgE" id="jqM-SN-rxE"/>
                                             <outlet property="likeButton" destination="3Zl-C1-hr3" id="Euh-tR-ffo"/>
+                                            <segue destination="CHd-3r-FHI" kind="show" id="Xuo-FR-o0j"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -97,6 +98,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2402.290076335878" y="12.67605633802817"/>
+        </scene>
+        <!--Single Image View Controller-->
+        <scene sceneID="bUQ-jg-QXg">
+            <objects>
+                <viewController id="CHd-3r-FHI" customClass="SingleImageViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BE5-9m-8eg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="pPm-Iu-zM6" userLabel="singleImageView">
+                                <rect key="frame" x="-8" y="-8" width="409" height="868"/>
+                                <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5hs-l2-LH4"/>
+                        <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pPm-Iu-zM6" firstAttribute="topMargin" secondItem="5hs-l2-LH4" secondAttribute="top" id="2GQ-4p-Hwk"/>
+                            <constraint firstItem="5hs-l2-LH4" firstAttribute="trailing" secondItem="pPm-Iu-zM6" secondAttribute="trailingMargin" id="LuN-vq-5fJ"/>
+                            <constraint firstItem="pPm-Iu-zM6" firstAttribute="leadingMargin" secondItem="5hs-l2-LH4" secondAttribute="leading" id="goR-MX-m3z"/>
+                            <constraint firstItem="5hs-l2-LH4" firstAttribute="bottom" secondItem="pPm-Iu-zM6" secondAttribute="bottomMargin" id="z5V-Db-nUk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ipc-ga-Vd5"/>
+                    <connections>
+                        <outlet property="imageView" destination="pPm-Iu-zM6" id="Ws8-Eg-A1p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iln-Lt-KFc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3186" y="20"/>
         </scene>
         <!--Profile-->
         <scene sceneID="ROb-4i-0v4">
@@ -228,6 +260,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="0" width="1600" height="1059"/>
         <image name="like_button_on" width="42" height="42"/>
         <image name="logout_button" width="44" height="44"/>
         <image name="tab_editorial_active" width="20" height="22"/>
