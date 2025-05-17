@@ -60,6 +60,7 @@ final class ProfileViewController: UIViewController {
     }
     
     // MARK: - Private Methods
+    // TODO: - didTapLogoutButton
     private func installAutoLayoutAndAddSubviews() {
         
         view.addSubview(avatarImageView)
@@ -99,5 +100,6 @@ final class ProfileViewController: UIViewController {
         ])
     }
     
+    // TODO: - didTapLogoutButton
     @objc private func didTapLogoutButton() { }
 }
