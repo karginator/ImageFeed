@@ -60,20 +60,17 @@ final class ProfileViewController: UIViewController {
     }
     
     // MARK: - Private Methods
-    // TODO: - didTapLogoutButton
     private func installAutoLayoutAndAddSubviews() {
-        
-        view.addSubview(avatarImageView)
-        view.addSubview(nameLable)
-        view.addSubview(loginLable)
-        view.addSubview(descriptionLable)
-        view.addSubview(logoutButton)
-        
-        avatarImageView.translatesAutoresizingMaskIntoConstraints = false
-        nameLable.translatesAutoresizingMaskIntoConstraints = false
-        loginLable.translatesAutoresizingMaskIntoConstraints = false
-        descriptionLable.translatesAutoresizingMaskIntoConstraints = false
-        logoutButton.translatesAutoresizingMaskIntoConstraints = false
+        [
+            avatarImageView,
+            nameLable,
+            loginLable,
+            descriptionLable,
+            loginLable
+        ].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview($0)
+        }
         
         NSLayoutConstraint.activate([
             avatarImageView.heightAnchor.constraint(equalToConstant: 70),
